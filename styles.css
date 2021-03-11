@@ -14,9 +14,10 @@ body {
   overflow-x: hidden;
 }
 
+/* Navigation Start */
+
 .nav-menu {
   font-size: 1.2rem;
-  /* padding-bottom: ; */
   padding-left: 0.6rem;
   padding-right: 0.6rem;
   width: 100%;
@@ -41,6 +42,9 @@ body {
   padding: 30px;
 }
 
+/* Navigation End */
+/* Header Start */
+
 .header-area {
   display: grid;
   grid-template-columns: repeat(2, 100px);
@@ -63,9 +67,8 @@ body {
 
 .logo-item-b {
   padding-right: 10px;
-  height: 16vh;
+  height: 10vh;
   width: 80vw;
-
   grid-column-start: 2;
   grid-column-end: 3;
   font-size: 1.75rem;
@@ -73,11 +76,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding-top: 50px;
+  padding-bottom: 0;
   padding-right: 0.5rem;
 }
 
 .header-area p {
-  padding-bottom: 50px;
+  padding-top: 0;
+  padding-bottom: 100px;
   grid-column-start: 2;
   grid-column-end: 3;
   font-size: 0.7rem;
@@ -86,6 +91,9 @@ body {
   padding-right: 0.7rem;
   margin-right: 40px;
 }
+
+/* Header End */
+/* Sidebar Start */
 
 .aside-section {
   background-image: url(./images/hot-coffee.gif);
@@ -101,6 +109,7 @@ body {
   background-color: #ead9bd;
   color: black;
   font-size: small;
+  text-align: center;
 }
 
 h2 {
@@ -112,16 +121,95 @@ h2 {
 
 .sidebar li {
   font-size: 0.6rem;
-  text-decoration: none;
+  list-style-type: none;
   padding: 8px;
+  text-align: center;
 }
+
+/* Sidebar End */
+/* Closing Start */
+
 .closing {
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 4rem;
   font-size: small;
 }
+
+/* Closing End */
+/* Footer Start */
+
 footer {
   text-align: center;
   padding: 1rem 1rem 0.4rem 1rem;
   font-size: 0.5rem;
 }
+
+/* Footer End */
+/* Media Query */
+
+@media (min-width: 601px) {
+  .list-item {
+    font-size: 1.5rem;
+    padding: 30px 60px;
+  }
+
+  .logo-item-a {
+    width: 200px;
+    height: 200px;
+    padding-left: 40px;        
+  }
+
+  .logo-item-b {    
+    height: 22vh;    
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 0;
+    padding-left: 140px;
+  }
+
+  .header-area p {
+    padding-top: 2rem;    
+    font-size: .9rem;    
+  }
+
+  .aside-section {
+    padding-top: 50px;
+  }
+
+  .sidebar {
+    width: 50%;
+    height: auto;
+    font-size: x-large;
+    padding-top: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .aside-section ul {
+    column-count: 2;
+    column-gap: 5rem;    
+  }
+
+  .sidebar li {
+    font-size: 1rem;
+    padding: 8px;   
+  }
+
+  .closing {
+    padding-top: 3rem;
+    font-size: large;
+  }
+}
+
+@media (min-width: 801px) {
+ 
+}
+
