@@ -1,32 +1,39 @@
-/* Original CSS: min-width 320, max width 600 */
+/* Original CSS: Phone size 320px wide */
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
-body {
+/* body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   background-color: black;
   color: #ead9bd;
-  width: 100%;
   overflow-x: hidden;
+} */
+
+/* Grid Container */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 4rem 4fr 4fr 4fr 4rem;
 }
 
 /* Navigation Start */
 
 .nav-menu {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
   background-color: black;
-  position: fixed;
-  margin: 0;
-  z-index: 1;
 }
 
 .nav-list {
@@ -34,182 +41,86 @@ body {
   list-style: none;
 }
 
-.list-item {
+.nav-item {
   color: #ead9bd;
-  text-decoration: none;
+  text-decoration: none;    
   display: flex;
-  justify-content: space-around;
-  padding: 30px;
+  justify-content: center;
+  padding: 1rem;
 }
 
 /* Navigation End */
 /* Header Start */
 
-.header-area {
-  display: grid;
-  grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(2, 100px);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  background-color: black;
-  padding-top: 4rem;
-}
-
-.logo-item-a {
-  width: 90%;
+.logo-image {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display:flex;
+  width: 100%;
   height: auto;
-  align-items: center;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  padding-left: 1rem;
-  padding-top: 3rem;
 }
 
-.logo-item-b {
-  padding-right: 10px;
-  height: 10vh;
-  width: 80vw;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  font-size: 1.75rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 0;
-  padding-right: 0.5rem;
-}
-
-.header-area p {
-  padding-top: 0;
-  padding-bottom: 100px;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  font-size: 0.7rem;
-  font-style: italic;
-  justify-content: flex-start;
-  padding-right: 0.7rem;
-  margin-right: 40px;
+.logo-title {
+grid-column: 2 / 5;
+grid-row: 2 / 3;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: auto;  
 }
 
 /* Header End */
-/* Sidebar Start */
+/* Menu Start */
 
-.aside-section {
-  background-image: url(./images/hot-coffee.gif);
-  background-repeat: no-repeat;
-  background-position: right;
-  width: 100%;
-  min-height: 300px;
+/* .coffee-menu {
   font-weight: bold;
-}
-
-.sidebar {
-  width: 33%;
   background-color: #ead9bd;
   color: black;
-  font-size: small;
   text-align: center;
+  grid-column: 1 /2;
+  grid-row: 3 / 5;
 }
 
 h2 {
-  font-size: 0.7rem;
-  padding: 4px;
-  line-height: 1.2;
+  font-size: 1.2rem;
   text-decoration: underline;
+  padding-bottom: 20px;
 }
 
-.sidebar li {
-  font-size: 0.6rem;
-  list-style-type: none;
-  padding: 8px;
-  text-align: center;
+.menu-item {
+  font-size: 1rem;
+  list-style-type: none;  
 }
 
-/* Sidebar End */
-/* Closing Start */
+/* Menu End */
+/* Image */
 
-.closing {
-  text-align: center;
-  padding-top: 4rem;
-  font-size: small;
+.product-image {
+  grid-column: 2 /5;
+  grid-row: 3 / 5;
 }
 
-/* Closing End */
+/* Image End */
+/* Closing Tagline */
+
+.tagline {
+  grid-column: 1 / 5;
+  grid-row: 5 /6;
+}
+
+/* Closing Tagline End */
 /* Footer Start */
 
 footer {
   text-align: center;
   padding: 1rem 1rem 0.4rem 1rem;
   font-size: 0.5rem;
-}
+} */
 
 /* Footer End */
-/* Media Query */
 
-@media (min-width: 601px) {
-  .list-item {
-    font-size: 1.5rem;
-    padding: 30px 60px;
-  }
 
-  .logo-item-a {
-    width: 200px;
-    height: 200px;
-    padding-left: 40px;        
-  }
 
-  .logo-item-b {    
-    height: 22vh;    
-    font-size: 2.25rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 0;
-    padding-left: 140px;
-  }
-
-  .header-area p {
-    padding-top: 2rem;    
-    font-size: .9rem;    
-  }
-
-  .aside-section {
-    padding-top: 50px;
-  }
-
-  .sidebar {
-    width: 50%;
-    height: auto;
-    font-size: x-large;
-    padding-top: 20px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    padding: 10px;
-    line-height: 2;
-    text-align: center;
-  }
-
-  .aside-section ul {
-    column-count: 2;
-    column-gap: 5rem;    
-  }
-
-  .sidebar li {
-    font-size: 1rem;
-    padding: 8px;   
-  }
-
-  .closing {
-    padding-top: 3rem;
-    font-size: large;
-  }
-}
-
-@media (min-width: 801px) {
- 
-}
 
