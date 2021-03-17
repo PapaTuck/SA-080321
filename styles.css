@@ -44,7 +44,7 @@ body {
 .logo-sm {
   width: 50px;
   height: 50px;
-  padding: 0 4px;
+  padding-left: .5em;
 }
 
 .nav-list {
@@ -102,6 +102,7 @@ body {
 
 /* Main Section */
 .main {
+  background-color: black;
   grid-area: main;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -114,7 +115,7 @@ body {
   text-decoration: underline;
   text-align: center;
   line-height: 3;
-  
+  grid-column: 1 / 2;
 }
 
 .coffee-menu ul li {
@@ -124,14 +125,14 @@ body {
   font-size: x-small;
   text-align: center;
   line-height: 1.7;
-  
+  grid-column: 1 / 2;
 }
 
 .product-image {
+  background-color: black;
   width: 30vh;
   align-self: center;
-  padding-bottom: 1em;
-  
+  grid-column: 2 / -1;
 }
 
 .tagline h3 {
@@ -160,7 +161,259 @@ body {
   font-size: xx-small;
 }
 
-/* Media Query */
+/* Media Query 1 (490-699)*/
 
-@media screen and (min-width: )
+@media screen and (min-width: 490px) {
+.logo-sm {
+  width: 60px;
+  height: 60px;
+  padding-left: .5em;
+  padding-top: .4em;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.nav-item {
+  text-decoration: none;
+  border: 3px solid #ead9bd;
+  border-radius: 50em;
+  color: #ead9bd;
+  padding: 4px 8px;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.nav-item:hover {
+  background-color: #ead9bd;
+  color: black;
+}
+
+/* Header Section */
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 3em 0.75em;
+}
+
+.logo-image {
+  display: flex;
+  width: 16vw;
+  height: 16vh;
+  padding-left: 0.4em;
+  padding-bottom: 0.2em;
+  grid-column: 1;
+}
+
+.logo-title h1 {
+  padding-left: 1em;
+  padding-bottom: 0.4em;
+  padding-top: 1em;
+  font-size: 2.4rem;
+  text-align: center;
+  grid-column: 2;
+}
+
+.logo-title p {
+  font-size: small;
+  font-style: italic;
+  padding-left: 3em;
+  padding-bottom: 1em;
+  text-align: center;
+  grid-column: 2;
+}
+
+/* Main Section */
+.main {
+  background-color: black;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.coffee-menu h2 {
+  background-color: #ead9bd;
+  color: black;
+  font-size: x-large;
+  text-decoration: underline;
+  text-align: center;
+  line-height: 2;
+  grid-column: 1 / 2;
+}
+
+.coffee-menu ul li {
+  background-color: #ead9bd;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: large;
+  text-align: center;
+  line-height: 1.7;
+  grid-column: 1 / 2;
+}
+
+.product-image {
+  background-color: black;
+  width: 30vh;
+  align-self: center;
+  grid-column: 2 / -1;
+}
+
+.tagline h3 {
+  padding-top: 1em;
+  text-align: center;
+  font-size: large;
+}
+
+.tagline p {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 1em;
+  font-size: medium;
+  font-style: italic;
+}
+
+}
+
+/* Media Query 2 (700 - 1024)*/
+
+@media screen and (min-width: 700px) {
+
+/* Navbar */
+
+/* .navigation {
+  background-color: black;
+  grid-area: navigation;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-sm {
+  width: 50px;
+  height: 50px;
+  padding-left: .5em;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.nav-item {
+  text-decoration: none;
+  border: 2px solid #ead9bd;
+  border-radius: 50em;
+  color: #ead9bd;
+  padding: 4px 8px;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.nav-item:hover {
+  background-color: #ead9bd;
+  color: black;
+}
+
+/* Header Section */
+/*
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2em 0.5em;
+}
+
+.logo-image {
+  display: flex;
+  width: 12vw;
+  height: 12vh;
+  padding-left: 0.4em;
+  padding-bottom: 0.2em;
+  grid-column: 1;
+}
+
+.logo-title h1 {
+  padding-left: 1em;
+  padding-bottom: 0.4em;
+  font-size: large;
+  grid-column: 2;
+}
+
+.logo-title p {
+  font-size: x-small;
+  font-style: italic;
+  padding-left: 1.5em;
+  padding-bottom: 1em;
+  grid-column: 2;
+}
+
+/* Main Section */
+/*
+.main {
+  background-color: black;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.coffee-menu h2 {
+  background-color: #ead9bd;
+  color: black;
+  font-size: x-small;
+  text-decoration: underline;
+  text-align: center;
+  line-height: 3;
+  grid-column: 1 / 2;
+}
+
+.coffee-menu ul li {
+  background-color: #ead9bd;
+  color: black;
+  text-decoration: none;
+  font-size: x-small;
+  text-align: center;
+  line-height: 1.7;
+  grid-column: 1 / 2;
+}
+
+.product-image {
+  background-color: black;
+  width: 30vh;
+  align-self: center;
+  grid-column: 2 / -1;
+}
+
+.tagline h3 {
+  padding-top: 1em;
+  text-align: center;
+  font-size: medium;
+}
+
+.tagline p {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 1em;
+  font-size: small;
+  font-style: italic;
+}
+
+/* Footer */
+
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: black;
+  padding-top: 2em;
+  padding-bottom: 0;
+  margin: 0 auto;
+  font-size: xx-small;
+} 
+}
 
