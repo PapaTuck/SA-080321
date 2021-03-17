@@ -122,6 +122,7 @@ body {
   background-color: #ead9bd;
   color: black;
   text-decoration: none;
+  list-style-type: none;
   font-size: x-small;
   text-align: center;
   line-height: 1.7;
